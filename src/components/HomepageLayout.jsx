@@ -1,6 +1,7 @@
 import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 import {
   Button,
   Container,
@@ -28,6 +29,7 @@ const { MediaContextProvider, Media } = createMedia({
  * HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled
  * components for such things.
  */
+
 const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
@@ -52,7 +54,8 @@ const HomepageHeading = ({ mobile }) => (
       }}
     />
     <Button primary size='huge'>
-      Get Started
+
+    <Link to='/ip'>click me</Link>
       <Icon name='right arrow' />
     </Button>
   </Container>

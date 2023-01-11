@@ -1,16 +1,17 @@
 import './App.css';
 import HomepageLayout from './components/HomepageLayout';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MyIp from './components/MyIp'
+import { Routes, Route } from "react-router-dom";
 function App() {
-    <Router>
-    <Routes>
-      <Route path="/" element={<HomepageLayout />} />
-    </Routes>
-  </Router>
 
 
   return (
-    <HomepageLayout />
+
+    <Routes>
+      <Route path="/" element={<HomepageLayout />} />
+      <Route path="/ip" element={<MyIp />} />
+    </Routes>
+
   );
 }
 
