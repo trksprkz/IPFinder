@@ -1,3 +1,7 @@
+# Project Description:
+I wanted to create an application that takes a users connection and returns their IP information. Allowing a button redirect to a Semantic UI React + React HF to submit a form denying their ip to be on the webpage. Via their mac-address. So next time someone comest to the site or they do, their ip doesn't show.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
