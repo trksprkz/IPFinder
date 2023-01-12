@@ -1,11 +1,14 @@
 import React from 'react'
 import { Form, Input, Button } from 'semantic-ui-react'
 import { useForm } from "react-hook-form";
-function DontShowIp() {
+
+export function DontShowIp() {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
-        console.log(data);
+        const hiddenIp = (data);
+
     }
+
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
     <Form.Group widths='equal'>
