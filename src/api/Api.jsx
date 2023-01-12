@@ -1,14 +1,27 @@
-import React from 'react'
+import React, { Component } from 'react'
+import axios from 'axios'
 
-function Api() {
-    var oReq = new XMLHttpRequest();
-oReq.addEventListener("load", function () { console.log(this.responseText); });
-oReq.open("GET", "https://api.ipbase.com/v2/info?ip=1.1.1.1");
-oReq.setRequestHeader("apikey", "iH2FnWq11pMKgJcKyjhwzxDs604ikYSdTdoojY8e");
-oReq.send();
-  return (
-    <div>Api</div>
-  )
-}
+  const api = axios.create({
+    baseURL: `https://api.ipbase.com/v2/info?apikey=iH2FnWq11pMKgJcKyjhwzxDs604ikYSdTdoojY8e`
+  })
 
+class Api extends Component {
+  state = {
+    ip: []
+  }
+
+  constructor() {
+    super()
+    api.get('/').then(res => {
+      console.log(res.data)
+      this.setState({ ip: res.data})
+    })
+  }
+
+  render() {
+    return (
+      { this.state.ip.map(ip => <h2>{ip.ip}</h2>)}
+    )
+  }
+  }
 export default Api
