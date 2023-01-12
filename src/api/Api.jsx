@@ -20,7 +20,9 @@ class Api extends Component {
 
   render() {
     return (
-      { this.state.ip.map(ip => <h2>{ip.ip}</h2>)}
+      <div>
+      { this.state.ip.map(ip => <h2 key={ip.ip}>{ip.ip}</h2>) }
+      </div>
     )
   }
   }
