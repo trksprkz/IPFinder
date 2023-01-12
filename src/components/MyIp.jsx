@@ -44,7 +44,7 @@ const HomepageHeading = ({ mobile }) => (
       }}
     />
     <div>
-        <h2>{Api}</h2>
+        <Api></Api>
     </div>
   </Container>
 )
