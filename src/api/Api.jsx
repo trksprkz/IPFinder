@@ -7,21 +7,21 @@ import axios from 'axios'
 
 class Api extends Component {
   state = {
-    ip: []
+    ipAddress: []
   }
 
   constructor() {
     super()
     api.get('/').then(res => {
       console.log(res.data)
-      this.setState({ ip: res.data})
+      this.setState({ ipAddress: res.data})
     })
   }
 
   render() {
     return (
       <div>
-      { this.state.ip.map(ip => <h2 key={ip.ip}>{ip.ip}</h2>) }
+      { this.state.ipAddress.map(ip => <h2 key={ipAddress.ip}>{ipAddress.ip}</h2>) }
       </div>
     )
   }
