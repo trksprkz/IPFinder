@@ -150,11 +150,8 @@ class MobileContainer extends Component {
                     <Icon name='sidebar' />
                   </Menu.Item>
                   <Menu.Item position='right'>
-                    <Button as='a' inverted>
-                      Log in
-                    </Button>
                     <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
-                      Sign Up
+                      Don't show my IP
                     </Button>
                   </Menu.Item>
                 </Menu>
@@ -175,10 +172,7 @@ MobileContainer.propTypes = {
 }
 
 const ResponsiveContainer = ({ children }) => (
-  /* Heads up!
-   * For large applications it may not be best option to put all page into these containers at
-   * they will be rendered twice for SSR.
-   */
+
   <MediaContextProvider>
     <DesktopContainer>{children}</DesktopContainer>
     <MobileContainer>{children}</MobileContainer>
