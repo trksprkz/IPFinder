@@ -7,6 +7,7 @@ function Api() {
   const removeElement = () => {
     setVisible((prev) => !prev);
   }
+
   const [address, setAddress] = useState("")
   const getAddress = () => {
     Axios.get('https://api.ipbase.com/v2/info?ip&apikey=iH2FnWq11pMKgJcKyjhwzxDs604ikYSdTdoojY8e').then((response) => {
@@ -20,7 +21,9 @@ function Api() {
 
   return (
     <div>
+      {visible && (
     <Button primary size='huge' onClick={ () => [getAddress(), removeElement()]}>Get IP</Button>
+      )}
       <h2>{address}</h2>
     </div>
   )
