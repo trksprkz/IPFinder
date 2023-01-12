@@ -34,7 +34,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content={Api}
+      content=''
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
@@ -43,6 +43,9 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '1.5em' : '3em',
       }}
     />
+    <div>
+        <h2>{Api}</h2>
+    </div>
   </Container>
 )
 
