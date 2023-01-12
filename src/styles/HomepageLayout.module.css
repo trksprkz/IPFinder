@@ -1,0 +1,6 @@
+.Linkcolor {
+    color: white;
+}
+.Linkcolor:hover {
+    color: black;
+}

@@ -2,6 +2,7 @@ import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
+import styles from '../styles/HomepageLayout.module.css'
 import {
   Button,
   Container,
@@ -25,10 +26,6 @@ const { MediaContextProvider, Media } = createMedia({
   },
 })
 
-/* Heads up!
- * HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled
- * components for such things.
- */
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
@@ -55,7 +52,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Button primary size='huge'>
 
-    <Link to='/ip'>click me</Link>
+    <Link to='/ip' className={styles.Linkcolor}>Click Me</Link>
       <Icon name='right arrow' />
     </Button>
   </Container>
@@ -104,7 +101,8 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a'>Policy's</Menu.Item>
                 <Menu.Item position='right'>
                   <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                    Don't show my IP
+                  <Link to='/hide'>Hide my IP</Link>
+
                   </Button>
                 </Menu.Item>
               </Container>
