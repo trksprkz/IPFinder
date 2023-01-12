@@ -2,16 +2,17 @@ import React, { useState } from 'react'
 import Axios from 'axios'
 import { Button } from 'semantic-ui-react'
 import { DontShowIp } from '../components/DontShowIp'
+import apiKey from '../api/apikey'
 function Api() {
 
   const [visible, setVisible] = useState(true);
   const removeElement = () => {
     setVisible((prev) => !prev);
   }
-
+  const apiUrl = {apiKey}
   const [address, setAddress] = useState("")
   const getAddress = () => {
-    Axios.get('https://api.ipbase.com/v2/info?ip&apikey=iH2FnWq11pMKgJcKyjhwzxDs604ikYSdTdoojY8e').then((response) => {
+    Axios.get({apiKey}).then((response) => {
       console.log(response)
       if (DontShowIp  === setAddress) {
         return 'BLOCKED IP'
