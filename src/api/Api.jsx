@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import Axios from 'axios'
 import { Button } from 'semantic-ui-react'
 import { DontShowIp } from '../components/DontShowIp'
+import { Link } from 'react-router-dom'
 import apiKey from './apikey'
+import Map from '../components/Map'
 function Api() {
 
   const [visible, setVisible] = useState(true);
@@ -17,10 +19,11 @@ function Api() {
       if (DontShowIp  === setAddress) {
         return 'BLOCKED IP'
       }
+
       setAddress('Your ip is ' + response.data.data.ip +
       ' Your Latitude is: ' + response.data.data.location.latitude +
       ' Your longitude is ' + response.data.data.location.longitude)
-
+      return <Link to='/map'>Click To See A Map</Link>
     })
   }
 
