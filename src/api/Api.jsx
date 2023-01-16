@@ -4,7 +4,7 @@ import { Button } from 'semantic-ui-react'
 import { DontShowIp } from '../components/DontShowIp'
 import { Link } from 'react-router-dom'
 import apiKey from './apikey'
-import Map from '../components/Map'
+
 function Api() {
 
   const [visible, setVisible] = useState(true);
