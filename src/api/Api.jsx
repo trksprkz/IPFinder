@@ -19,11 +19,12 @@ function Api() {
       if (DontShowIp  === setAddress) {
         return 'BLOCKED IP'
       }
-
+      const returnMap = () => {
+        return <Link to='/map'>Click To See A Map</Link>
+        }
       setAddress('Your ip is ' + response.data.data.ip +
       ' Your Latitude is: ' + response.data.data.location.latitude +
-      ' Your longitude is ' + response.data.data.location.longitude)
-      return <Link to='/map'>Click To See A Map</Link>
+      ' Your longitude is ' + response.data.data.location.longitude + {returnMap})
     })
   }
 
