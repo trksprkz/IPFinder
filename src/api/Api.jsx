@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Axios from 'axios'
 import { Button } from 'semantic-ui-react'
 import { DontShowIp } from '../components/DontShowIp'
+import apiKey from './apikey'
 function Api() {
 
   const [visible, setVisible] = useState(true);
